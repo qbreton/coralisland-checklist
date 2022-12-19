@@ -30,8 +30,8 @@ const Tab = styled.div`
 ` 
 
 function App() {
-  const [tab, setTab] = useState('Poissons');
-  const categories = ['Fish', 'Insects', 'Artefacts'];
+  const [tab, setTab] = useState('Fish');
+  const categories = ['Fish', 'Insects', 'Artifacts'];
 
   return (
     <Container className="App">
@@ -40,9 +40,9 @@ function App() {
           <Tab key={index} onClick={() => setTab(name)}>{name}</Tab>
         ))}
       </Tabs>
-      { tab === 'Poissons' && <Checklist listItems={fishes} itemType={'fishes'}></Checklist> } 
-      { tab === 'Insectes' && <Checklist listItems={bugs} itemType={'bugs'}></Checklist> }
-      { tab === 'Artefacts' && <Checklist listItems={artifacts} itemType={'artifacts'}></Checklist> } 
+      { tab === 'Fish' && <Checklist listItems={fishes} itemType={'fishes'}></Checklist> } 
+      { tab === 'Insects' && <Checklist listItems={bugs} itemType={'bugs'}></Checklist> }
+      { tab === 'Artifacts' && <Checklist listItems={artifacts} itemType={'artifacts'}></Checklist> } 
     </Container>
   );
 }
